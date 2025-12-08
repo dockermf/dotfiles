@@ -1,0 +1,9 @@
+otf-commit-mono-nerd 3.4.0-1
+ttf-cascadia-code-nerd 3.4.0-1
+ttf-firacode-nerd 3.4.0-1
+ttf-hack-nerd 3.4.0-1
+ttf-ibmplex-mono-nerd 3.4.0-1
+ttf-iosevka-nerd 3.4.0-1
+ttf-iosevkaterm-nerd 3.4.0-1
+ttf-jetbrains-mono 2.304-2
+ttf-ubuntu-mono-nerd 3.4.0-1

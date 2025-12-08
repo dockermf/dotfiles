@@ -1,0 +1,113 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-bottom": -10,
+  "spacing": 0,
+  "modules-left": [
+    "custom/archicon",
+    "cpu",
+    "memory"
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "backlight",
+    "battery",
+    "pulseaudio",
+    "clock"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name}"
+  },
+
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": "{icon}",
+    "format-off": "{icon}",
+    "format-connected": "{icon}",
+    "format-icons": {
+      "on": "󰂯",
+      "off": "󰂲",
+      "connected": "󰂱"
+    },
+    "on-click": "blueman-manager",
+    "tooltip-format-connected": "{device_enumerate}"
+  },
+
+  "clock": {
+    "timezone": "Asia/Yekaterinburg",
+    "tooltip": false,
+    "format": "{:%H:%M:%S  -  %A, %d}",
+    "interval": 1
+  },
+
+  "network": {
+    "format-wifi": "󰤢",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰤠 ",
+    "interval": 5,
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "on-click": "nm-connection-editor"
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
+    "format-icons": [ "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+    "on-click": "ghostty -e htop"
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": "  {used:0.1f}G/{total:0.1f}G",
+    "tooltip-format": "Memory"
+  },
+
+  "backlight": {
+    "format": "{icon}  {percent}%",
+    "format-icons": [ "", "󰃜", "󰃛", "󰃞", "󰃝", "󰃟", "󰃠" ],
+    "interval": 5,
+    "on-scroll-up": "brightnessctl set +2%",
+    "on-scroll-down": "brightnessctl set 2%-",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [ "", "", " " ]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-full": "{icon}  {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄  {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁","󰂂", "󰁹" ] // nf-md-battery
+  },
+
+  "custom/lock": {
+    "tooltip": false,
+    "on-click": "sh -c '(sleep 0s; hyprlock)' & disown",
+    "format": ""
+  },
+
+  "custom/archicon": {
+    "format": "" // nf-dev-archlinux
+  }
+}
